@@ -1,154 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body {
-            background-color: rgb(225, 168, 235); 
-        }
-</style>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/ba57e03ff9.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header>
-    <h1>Ryder Paulus</h1>
-    <p>I am a Senior International Business Major with a concentration in Data Analytics and a double major in Information Systems. 
-        I like to workout, take hikes, play soccer, and watch movies.
-    </p>
+    <header class="intro">
+        <h1>Ryder Paulus</h1>
+        <img id="intro_pic" src="images/headshot.jpg" height="200">
+        <p id="intro_header">I am a Senior International Business Major with a concentration in Data Analytics and a
+            double major in Information Systems.
+            I have professional experience in consulting, international trade, and data analytics; My skills include
+            GIS, analytics, DBMS, and team management.
+        </p>
     </header>
-<hr>
+    <hr>
+    <hr>
     <main>
-    <h2>Fall 2026 Courses</h2>
 
+        <div class="prof_exp">
+            <h3>Professional Experiences</h3>
+            <div>
+                <ul>
+                    <li class="companies_roles">H2o Well Service - Data Analyst</li>
+                    <li class="job_desc">- Developed a database connecting ATTOM tax assessor data, land parcel
+                        shapefiles, and Washington State Department of Ecology water well data to build out the spatial
+                        relationship between landowners and known groundwater wells
+                        <br>- Sourced publicly available shapefile & water well data from the Montana State Government,
+                        then utilized QGIS and Excel to build the spatial relationship between landowners and known
+                        groundwater wells
+                        <br>- Utilized the Snowflake environment to analyze public county municipal codes to build out
+                        predictive tables of potential customers for new groundwater wells
+                    </li>
+                    <li class="companies_roles">Oman Trade Office US - International Trade Analyst</li>
+                    <li class="job_desc">In my capacity as an International Trade Analyst for OTO US, I provided
+                        high-quality insights into the data on trade flows between the US and Oman, identifying areas
+                        for growth between the two nations and between Oman and specific US states. Via these data and
+                        insights, I worked to support the trade office in its goals of strengthening economic ties and
+                        increasing trade across various sectors between the US and Oman. This position allowed me to
+                        grow my analytics skills while utilizing my knowledge of international business, trade, and
+                        relations.</li>
+                    <li class="companies_roles">PA Global Business Associates - Research & Data Analyst</li>
+                    <li class="job_desc">I work under Wilfred Muskens and his team to help create a business plan for
+                        their current consulting client, the Chamber of Commerce of Oman. I conduct cultural and
+                        economic research on the client, performing data collection and analytics on economic and
+                        governmental factors to help the team complete the business plan and provide the best and most
+                        detailed results for the client.
+                        <br>I utilize my analytical and visualization skills on this project, combining my skills in
+                        Excel, Tableau, and other research methods to provide clear and understandable analysis of vast
+                        amounts of data.
+                    </li>
+                </ul>
+            </div>
+        </div>
+<br>
+<hr id="main_divider">
+<br>
+    <h3>Skills Proficency</h4>
     <table border="1">
-        <thead>
-            <tr>
-                <td>Course Code</td>
-                <td>Course Name</td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>CS 310</td>
-                <td>Web Development</td>
-            </tr>
-            <tr>
-                <td>CS 221</td>
-                <td>Data Structures</td>
-            </tr>
-            <tr>
-                <td>EN 214</td>
-                <td>World Literature</td>
-            </tr>
-            <tr>
-                <td>HON 205</td>
-                <td>Leadership Theory</td>
-            </tr>
-        </tbody>
-    </table>
-    
-    <h2>My Favorite Movies</h2>
-    <ol>
-        <li>Star Wars Episode III: Revenge of the Sith <a  href="https://www.imdb.com/title/tt0121766/" target="_blank">(IMBD)</a></li>
-        <li>Tombstone</li>
-        <li>Project Hail Mary</li>
-        <li>Brokeback Mountain</li>
-        <li>Cars 2</li>
-        <li>All Quiet on the Western Front</li>
-        <li>Dune</li>
-        <li>Dune 2</li>
-        <li>Mama Mia</li>
-        <li>Rogue One: A Star Wars Story</li>
-    </ol>
-    <h3>Movie Pics</h3>
-    <table>
         <tr>
-            <td>Star Wars:</td>
-            <td><img src="images/revenge-of-the-sith.jpg" width="400" height="500"></td>
-            <td>Tombstone:</td>
-            <td><img src="images/tombstone.png" width="400" height="500"></td>
+            <td>SQL</td>
+            <td>⭐⭐⭐⭐⭐</td>
+        </tr>
+        <tr>
+            <td><i class="fa-solid fa-database"></i>DBMS</td>
+            <td>⭐⭐⭐⭐⭐</td>
+        </tr>
+        <tr>
+            <td><i class="fa-solid fa-code"></i>PHP</td>
+            <td>⭐⭐⭐</td>
+        </tr>
+        <tr>
+            <td><i class="fa-solid fa-file-excel"></i>Excel</td>
+            <td>⭐⭐⭐⭐</td>
+        </tr>
+        <tr>
+            <td><i class="fa-solid fa-file-code"></i> HTML</td>
+            <td>⭐⭐⭐</td>
         </tr>
     </table>
-    </main>
 
+<br>
+<hr id="main_divider">
+<br>
+
+        <div id="courses_sect">
+            <h3 id="Fall_courses">Fall 2026 Courses</h2>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <td>Course Code</td>
+                            <td>Course Name</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CS 310</td>
+                            <td>Web Development</td>
+                        </tr>
+                        <tr>
+                            <td>CS 221</td>
+                            <td>Data Structures</td>
+                        </tr>
+                        <tr>
+                            <td>EN 214</td>
+                            <td>World Literature</td>
+                        </tr>
+                        <tr>
+                            <td>HON 205</td>
+                            <td>Leadership Theory</td>
+                        </tr>
+                    </tbody>
+                </table>
+        </div>
+
+
+    </main>
+    <hr>
+    <hr>
     <footer>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <p>Whatcha looking for down here?</p>
+        <p>Contact me at:</p>
+        <p>paulusr@etown.edu || rbpaulus5@gmail.com || 484.379.3110</p>
+        <p></p>
     </footer>
 </body>
+
 </html>
