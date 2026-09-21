@@ -1,59 +1,78 @@
-
 .intro {
     text-align: center;
 }
+
 #intro_header {
     text-align: center;
     padding-bottom: 5px;
 }
+
 #intro_pic {
     border-radius: 50%;
 }
+
 header {
     background-color: lightcyan;
 }
+
+header>h1 {
+    font-style: italic;
+}
+
 h1 {
     text-align: center;
     font-weight: 400;
-    font-style: normal;
 }
+
 h3 {
     text-align: center;
     font-weight: 400;
     font-style: normal;
     font-weight: bold;
 }
+
 main {
     background-color: lightcyan;
+}
+
+main li.companies_roles {
+    font-style: bold;
+    text-align: left;
+    font-size: smaller;
+    list-style-type: none;
+    margin-left: -1.5rem;
 }
 
 #Fall_courses {
     font-weight: bold;
     text-align: center;
     padding-bottom: 10px;
+
 }
+
 table {
     border-width: 3px;
     text-align: center;
     margin: auto;
 }
+
 #courses_sect {
     margin: auto;
     text-align: center;
     padding-bottom: 20px;
 }
+
 .prof_exp {
     text-align: center;
     font-size: large;
     padding-bottom: 10px;
     padding-top: 10px;
+    display:flex;
+    justify-content: space-evenly;
+    vertical-align: middle;
+    flex-direction: column;
 }
-.companies_roles {
-    text-align: left;
-    font-size: smaller;
-    list-style-type: none;
-    margin-left: -1.5rem;
-}
+
 .job_desc {
     text-align: left;
     font-size: smaller;
@@ -69,4 +88,8 @@ footer {
     background-color: lightcyan;
     padding-top: 5px;
     padding-bottom: 20px;
+}
+
+footer>p {
+    font-weight: bold;
 }
