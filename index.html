@@ -4,129 +4,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Ryder Paulus | Home</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/ba57e03ff9.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header class="intro">
-        <h1>Ryder Paulus</h1>
-        <img id="intro_pic" src="images/headshot.jpg" height="200">
-        <p id="intro_header">I am a Senior International Business Major with a concentration in Data Analytics and a
-            double major in Information Systems.
-            I have professional experience in consulting, international trade, and data analytics; My skills include
-            GIS, analytics, DBMS, and team management.
-        </p>
+    <nav class="site-nav">
+        <a class="brand" href="index.html">Ryder Paulus</a>
+        <ul>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="internships.html">Internships</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="abroad.html">Time Abroad</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <img src="images/headshot.jpg" alt="Headshot of Ryder Paulus">
+        <div class="hero-text">
+            <h1>Ryder Paulus</h1>
+            <p class="tagline">International Business &amp; Information Systems &middot; Elizabethtown College '27</p>
+            <p>
+                I'm a senior in the Elizabethtown College Honors Program studying International Business and
+                Information Systems. My work sits where data meets global business: I've analyzed U.S.&ndash;Oman
+                trade flows, researched export and FDI opportunities for the Oman Chamber of Commerce, and built
+                spatial databases linking landowners to groundwater wells. I recently spent a semester in Lyon,
+                France, and I bring intermediate French, a love of GIS and analytics, and experience leading teams.
+            </p>
+            <a class="button" href="internships.html">View my experience</a>
+            <a class="button outline" href="images/paulusR_resume.pdf">Resume</a>
+        </div>
     </header>
-    <hr>
-    <hr>
+
     <main>
+        <section>
+            <h2 class="section-title">Explore</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3><i class="fa-solid fa-briefcase"></i>Internships</h3>
+                    <p>Data analytics at H2o Well Services, trade analysis for the Oman Trade Office US, and research
+                        with Pennsylvania Global Business Advisors.</p>
+                    <a href="internships.html">Read more &rarr;</a>
+                </div>
+                <div class="card">
+                    <h3><i class="fa-solid fa-diagram-project"></i>Projects</h3>
+                    <p>Spatial data builds in QGIS and Snowflake, trade-opportunity analysis, and international research
+                        presented at academic conferences.</p>
+                    <a href="projects.html">Read more &rarr;</a>
+                </div>
+                <div class="card">
+                    <h3><i class="fa-solid fa-earth-europe"></i>Time Abroad</h3>
+                    <p>A semester at UCLY in Lyon, France, and a study trip to Geneva and Konstanz touring the WHO, WTO,
+                        and more.</p>
+                    <a href="abroad.html">Read more &rarr;</a>
+                </div>
+            </div>
+        </section>
 
-        <div class="prof_exp">
-            <h3>Professional Experiences</h3>
-            
-                <ul>
-                    <li class="companies_roles">H2o Well Service - Data Analyst</li>
-                    <li class="job_desc">Developed a database connecting ATTOM tax assessor data, land parcel
-                        shapefiles, and Washington State Department of Ecology water well data to build out the spatial
-                        relationship between landowners and known groundwater wells
-                        <br>Sourced publicly available shapefile & water well data from the Montana State Government,
-                        then utilized QGIS and Excel to build the spatial relationship between landowners and known
-                        groundwater wells
-                        <br>Utilized the Snowflake environment to analyze public county municipal codes to build out
-                        predictive tables of potential customers for new groundwater wells
-                    </li>
-                    <li class="companies_roles">Oman Trade Office US - International Trade Analyst</li>
-                    <li class="job_desc">In my capacity as an International Trade Analyst for OTO US, I provided
-                        high-quality insights into the data on trade flows between the US and Oman, identifying areas
-                        for growth between the two nations and between Oman and specific US states. Via these data and
-                        insights, I worked to support the trade office in its goals of strengthening economic ties and
-                        increasing trade across various sectors between the US and Oman. This position allowed me to
-                        grow my analytics skills while utilizing my knowledge of international business, trade, and
-                        relations.</li>
-                    <li class="companies_roles">PA Global Business Associates - Research & Data Analyst</li>
-                    <li class="job_desc">I work under Wilfred Muskens and his team to help create a business plan for
-                        their current consulting client, the Chamber of Commerce of Oman. I conduct cultural and
-                        economic research on the client, performing data collection and analytics on economic and
-                        governmental factors to help the team complete the business plan and provide the best and most
-                        detailed results for the client.
-                        <br>I utilize my analytical and visualization skills on this project, combining my skills in
-                        Excel, Tableau, and other research methods to provide clear and understandable analysis of vast
-                        amounts of data.
-                    </li>
-                </ul>
-            
-        </div>
-<br>
-<hr id="main_divider">
-<br>
-    <h3 id="Skills">Skills Proficency</h4>
-    <table border="1">
-        <tr>
-            <td>SQL</td>
-            <td>⭐⭐⭐⭐⭐</td>
-        </tr>
-        <tr>
-            <td><i class="fa-solid fa-database"></i>DBMS</td>
-            <td>⭐⭐⭐⭐⭐</td>
-        </tr>
-        <tr>
-            <td><i class="fa-solid fa-code"></i>PHP</td>
-            <td>⭐⭐⭐</td>
-        </tr>
-        <tr>
-            <td><i class="fa-solid fa-file-excel"></i>Excel</td>
-            <td>⭐⭐⭐⭐</td>
-        </tr>
-        <tr>
-            <td><i class="fa-solid fa-file-code"></i> HTML</td>
-            <td>⭐⭐⭐</td>
-        </tr>
-    </table>
+        <section>
+            <h2 class="section-title">Skills</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Skill</th>
+                        <th>Proficiency</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><i class="fa-solid fa-database"></i>SQL / DBMS</td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa-solid fa-file-excel"></i>Excel</td>
+                        <td>⭐⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa-solid fa-map-location-dot"></i>QGIS</td>
+                        <td>⭐⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa-solid fa-chart-column"></i>Tableau / Power BI</td>
+                        <td>⭐⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa-solid fa-code"></i>Python / R / Java / SAS</td>
+                        <td>⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa-solid fa-file-code"></i>HTML / PHP</td>
+                        <td>⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa-solid fa-language"></i>French</td>
+                        <td>Intermediate</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
-<br>
-<hr id="main_divider">
-<br>
-
-        <div id="courses_sect">
-            <h3 id="Fall_courses">Fall 2026 Courses</h2>
-                <table border="1">
-                    <thead>
-                        <tr>
-                            <td>Course Code</td>
-                            <td>Course Name</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>CS 310</td>
-                            <td>Web Development</td>
-                        </tr>
-                        <tr>
-                            <td>CS 221</td>
-                            <td>Data Structures</td>
-                        </tr>
-                        <tr>
-                            <td>EN 214</td>
-                            <td>World Literature</td>
-                        </tr>
-                        <tr>
-                            <td>HON 205</td>
-                            <td>Leadership Theory</td>
-                        </tr>
-                    </tbody>
-                </table>
-        </div>
-
-
+        <section>
+            <h2 class="section-title">Fall 2026 Courses</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CS 310</td>
+                        <td>Web Development</td>
+                    </tr>
+                    <tr>
+                        <td>CS 221</td>
+                        <td>Data Structures</td>
+                    </tr>
+                    <tr>
+                        <td>EN 214</td>
+                        <td>World Literature</td>
+                    </tr>
+                    <tr>
+                        <td>HON 205</td>
+                        <td>Leadership Theory</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </main>
-    <hr>
-    <hr>
+
     <footer>
-        <p>Contact me at:</p>
-        <p id="contact-line">paulusr@etown.edu || rbpaulus5@gmail.com || 484.379.3110</p>
-        <p></p>
+        <p>Contact me</p>
+        <p>
+            <a href="mailto:paulusr@etown.edu">paulusr@etown.edu</a> &middot;
+            <a href="mailto:rbpaulus5@gmail.com">rbpaulus5@gmail.com</a> &middot;
+            484.379.3110 &middot;
+            <a href="https://www.linkedin.com/in/rpaulus1326">LinkedIn</a>
+        </p>
     </footer>
 </body>
 

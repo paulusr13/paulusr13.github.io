@@ -1,95 +1,343 @@
-.intro {
-    text-align: center;
+/* ---------- Palette ---------- */
+:root {
+    --eggshell: #f0ead6;
+    --eggshell-light: #f8f4e8;
+    --eggshell-dark: #e2d9bf;
+    --blue: #2348b8;       /* a touch darker than royal blue (#4169e1) */
+    --blue-dark: #1a3690;
+    --ink: #1f2433;
+    --muted: #4d5366;
 }
 
-#intro_header {
-    text-align: center;
-    padding-bottom: 5px;
+* {
+    box-sizing: border-box;
 }
 
-#intro_pic {
+body {
+    margin: 0;
+    background-color: var(--eggshell);
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.6;
+}
+
+a {
+    color: var(--blue);
+}
+
+a:hover {
+    color: var(--blue-dark);
+}
+
+h1,
+h2,
+h3 {
+    color: var(--blue);
+    font-weight: bold;
+}
+
+/* ---------- Navigation ---------- */
+.site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 2rem;
+    background-color: var(--eggshell-light);
+    border-bottom: 3px solid var(--blue);
+}
+
+.site-nav .brand {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--blue);
+    text-decoration: none;
+}
+
+.site-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.site-nav ul a {
+    display: block;
+    padding: 0.35rem 0.9rem;
+    border-radius: 999px;
+    color: var(--blue);
+    text-decoration: none;
+}
+
+.site-nav ul a:hover,
+.site-nav ul a.active {
+    background-color: var(--blue);
+    color: var(--eggshell-light);
+}
+
+/* ---------- Layout ---------- */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 3rem;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 0.25rem;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 0.5rem auto 1.5rem;
+    background-color: var(--blue);
+}
+
+.page-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    color: var(--muted);
+}
+
+/* ---------- Home hero ---------- */
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 3rem 1.5rem;
+}
+
+.hero img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
     border-radius: 50%;
+    border: 5px solid var(--blue);
 }
 
-header {
-    background-color: lightcyan;
+.hero-text {
+    max-width: 520px;
 }
 
-header>h1 {
+.hero-text h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.hero-text .tagline {
+    margin: 0.25rem 0 1rem;
+    color: var(--blue);
     font-style: italic;
 }
 
-h1 {
+.button {
+    display: inline-block;
+    margin: 0.25rem 0.5rem 0.25rem 0;
+    padding: 0.5rem 1.1rem;
+    border: 2px solid var(--blue);
+    border-radius: 999px;
+    background-color: var(--blue);
+    color: var(--eggshell-light);
+    text-decoration: none;
+}
+
+.button.outline {
+    background-color: transparent;
+    color: var(--blue);
+}
+
+.button:hover {
+    background-color: var(--blue-dark);
+    border-color: var(--blue-dark);
+    color: var(--eggshell-light);
+}
+
+/* ---------- Cards ---------- */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    padding: 1.5rem;
+    background-color: var(--eggshell-light);
+    border-top: 4px solid var(--blue);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(31, 36, 51, 0.08);
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card i {
+    margin-right: 0.4rem;
+}
+
+/* ---------- Timeline entries (internships / abroad) ---------- */
+.entry {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    background-color: var(--eggshell-light);
+    border-left: 5px solid var(--blue);
+    border-radius: 8px;
+}
+
+.entry h2 {
+    margin: 0;
+}
+
+.entry .meta {
+    margin: 0.25rem 0 1rem;
+    color: var(--muted);
+    font-style: italic;
+}
+
+.entry ul {
+    padding-left: 1.2rem;
+}
+
+.entry li {
+    margin-bottom: 0.5rem;
+}
+
+.tag {
+    display: inline-block;
+    margin: 0 0.3rem 0.3rem 0;
+    padding: 0.1rem 0.6rem;
+    border: 1px solid var(--blue);
+    border-radius: 999px;
+    color: var(--blue);
+    font-size: 0.85rem;
+}
+
+/* ---------- Image placeholders ----------
+   Drop a picture into images/ with the file name shown in the box
+   (or change the img src) and it will fill the slot automatically. */
+.photo {
+    position: relative;
+    margin: 0;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border: 2px dashed var(--blue);
+    border-radius: 8px;
+    background-color: var(--eggshell-dark);
+}
+
+.photo::before {
+    content: "Add image: " attr(data-file);
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
     text-align: center;
-    font-weight: 400;
+    color: var(--blue);
+    font-size: 0.9rem;
 }
 
-h3 {
-    text-align: center;
-    font-weight: 400;
-    font-style: normal;
-    font-weight: bold;
+.photo img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-main {
-    background-color: lightcyan;
+.photo figcaption {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 0.4rem 0.75rem;
+    background-color: rgba(35, 72, 184, 0.85);
+    color: var(--eggshell-light);
+    font-size: 0.85rem;
 }
 
-main li.companies_roles {
-    font-style: bold;
-    text-align: left;
-    font-size: smaller;
-    list-style-type: none;
-    margin-left: -1.5rem;
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
 }
 
-#Fall_courses {
-    font-weight: bold;
-    text-align: center;
-    padding-bottom: 10px;
-
-}
-
+/* ---------- Tables ---------- */
 table {
-    border-width: 3px;
-    text-align: center;
-    margin: auto;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: var(--eggshell-light);
 }
 
-#courses_sect {
-    margin: auto;
-    text-align: center;
-    padding-bottom: 20px;
-}
-
-.prof_exp {
-    text-align: center;
-    font-size: large;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    display:flex;
-    justify-content: space-evenly;
-    vertical-align: middle;
-    flex-direction: column;
-}
-
-.job_desc {
+th,
+td {
+    padding: 0.5rem 1.25rem;
+    border: 1px solid var(--eggshell-dark);
     text-align: left;
-    font-size: smaller;
-    margin-left: 2rem;
-    list-style-type: disc;
 }
 
+thead th {
+    background-color: var(--blue);
+    color: var(--eggshell-light);
+}
 
+td i {
+    margin-right: 0.4rem;
+    color: var(--blue);
+}
+
+/* ---------- Footer ---------- */
 footer {
+    padding: 1.5rem;
+    background-color: var(--blue);
+    color: var(--eggshell-light);
     text-align: center;
-    font-weight: 400;
-    font-style: oblique;
-    background-color: lightcyan;
-    padding-top: 5px;
-    padding-bottom: 20px;
 }
 
-footer>p {
-    font-weight: bold;
+footer a {
+    color: var(--eggshell-light);
+}
+
+footer a:hover {
+    color: var(--eggshell-dark);
+}
+
+footer p {
+    margin: 0.3rem 0;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 700px) {
+    .entry {
+        grid-template-columns: 1fr;
+    }
+
+    .site-nav {
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
 }
